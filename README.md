@@ -1,43 +1,57 @@
-# etl-pipeline-r-monitoreo-campo
-Pipeline ETL en python que consolida datos operativos de captura manual en Google Sheets a formato analítico (tabular)
-
-
-ETL Pipeline — Consolidación de datos de monitoreo de campo
+# ETL Pipeline — Consolidación de datos de monitoreo de campo
 
 Pipeline de ETL en Python que extrae datos operativos de captura manual desde Google Sheets, los limpia y transforma, y los entrega en un formato analítico (tabular) listo para análisis y visualización.
 
-# El problema
+## El problema
 
-Los datos de monitoreo de campo se capturan manualmente en Google Sheets, en un formato pensado para el registro, no para el análisis: (describe el problema real, por ejemplo: múltiples hojas, encabezados inconsistentes, fechas en distintos formatos, datos sin normalizar). Eso hace difícil consolidarlos y analizarlos a tiempo. Este pipeline automatiza esa consolidación y deja los datos listos para usar.
+Los datos de monitoreo de campo se capturan manualmente en Google Sheets, en un formato pensado para el registro, no para el análisis: _(describe el problema real, por ejemplo: múltiples hojas, encabezados inconsistentes, fechas en distintos formatos, datos sin normalizar)_. Eso hace difícil consolidarlos y analizarlos a tiempo. Este pipeline automatiza esa consolidación y deja los datos listos para usar.
 
+> **Nota:** este proyecto usa datos de ejemplo / simulados. No contiene información confidencial de ninguna organización.
 
-Nota: este proyecto usa datos de ejemplo / simulados. No contiene información confidencial de ninguna organización.
+## Qué hace (flujo ETL)
 
+1. **Extracción (Extract):** lee los datos desde Google Sheets _(vía la API de Google Sheets / exportación a CSV)_.
+2. **Transformación (Transform):** limpia y normaliza la información — _(maneja valores faltantes, unifica formatos de fecha, consolida varias hojas en una sola tabla, valida tipos de datos)_.
+3. **Carga (Load):** entrega un dataset tabular _(en CSV / base de datos)_ listo para Power BI o cualquier herramienta de análisis.
 
+## Tecnologías
 
-# Qué hace (flujo ETL)
+- **Python** — _(pandas, gspread / google-api-python-client, etc.)_
+- **Google Sheets** — fuente de datos
+- _(otras librerías que hayas usado)_
 
+## Estructura del repositorio
 
-Extracción (Extract): lee los datos desde Google Sheets (vía la API de Google Sheets / exportación a CSV).
-Transformación (Transform): limpia y normaliza la información — (maneja valores faltantes, unifica formatos de fecha, consolida varias hojas en una sola tabla, valida tipos de datos).
-Carga (Load): entrega un dataset tabular (en CSV / base de datos) listo para Power BI o cualquier herramienta de análisis.
-
-
-# Tecnologías
-
-
-Python — (pandas, gspread / google-api-python-client, etc.)
-Google Sheets — fuente de datos
-(otras librerías que hayas usado)
-
-
-# Estructura del repositorio
-
+```
 ├── src/            → código del pipeline (etl.py)
 ├── data/           → datos de ejemplo (entrada y salida)
 └── README.md
+```
 
-Cómo ejecutarlo
+## Cómo ejecutarlo
 
-bashpip install -r requirements.txt
+```bash
+pip install -r requirements.txt
 python src/etl.py
+```
+
+## Ejemplo
+
+**Entrada** _(Google Sheets, captura manual — formato desordenado):_
+
+_(pega aquí una muestra o captura del formato de entrada)_
+
+**Salida** _(formato analítico, limpio y tabular):_
+
+_(pega aquí una muestra del resultado consolidado)_
+
+## Resultado
+
+_(En una o dos frases: qué se ganó. Ejemplo: "Reduce de X a Y el tiempo de consolidación de los datos y elimina los errores de copiado manual.")_
+
+## Sobre mí
+
+**Emilio Zuluaga Gutiérrez** — Analista de Datos con enfoque financiero. Ingeniero industrial con especialización en finanzas. Construyo pipelines, tableros e indicadores que traducen los datos en decisiones.
+
+- Correo: emzuluaga@unal.edu.co
+- LinkedIn: https://linkedin.com/in/emilio-zuluaga
