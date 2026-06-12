@@ -37,13 +37,14 @@ python src/etl.py
 
 ## Ejemplo
 
-**Entrada** _(Google Sheets, captura manual — formato desordenado):_
+**Entrada** 
+<img width="958" height="413" alt="image" src="https://github.com/user-attachments/assets/d58bf301-8e29-434c-a8cd-bfbdbd757bd5" />
 
-_(pega aquí una muestra o captura del formato de entrada)_
 
-**Salida** _(formato analítico, limpio y tabular):_
+**Salida** 
+<img width="959" height="503" alt="image" src="https://github.com/user-attachments/assets/3125d0d1-ebc4-40c8-9f96-d61ebef717a2" />
 
-_(pega aquí una muestra del resultado consolidado)_
+
 
 ## Resultado
 
