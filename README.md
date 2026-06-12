@@ -42,7 +42,7 @@ python src/etl.py
 
 
 **Salida** 
-<img width="959" height="503" alt="image" src="https://github.com/user-attachments/assets/3125d0d1-ebc4-40c8-9f96-d61ebef717a2" />
+
 
 
 
